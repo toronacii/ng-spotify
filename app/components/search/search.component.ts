@@ -5,8 +5,7 @@ import { Artist } from './../../common/artist';
 @Component({
     moduleId: module.id,
     selector: 'search',
-    templateUrl: 'search.component.html',
-    styleUrls: [ 'styles.css' ]
+    templateUrl: 'search.component.html'
 })
 export class SearchComponent implements OnInit {
 
