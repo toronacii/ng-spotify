@@ -4,3 +4,21 @@
 <form action="" class="form-group">
     <input type="text" name="searchStr" class="form-control" placeholder="Search Artists..." [(ngModel)]="searchStr" (keyup)="searchMusic()">
 </form>
+
+<div *ngIf="artists">
+    <div *ngFor="let artist of artists">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="search-artist well">
+                    <h4><a routerLink="/artist/{{ artist.id }}">{{ artist.name }}</a></h4>
+                    <div *ngIf="artist.genres.length">
+                        <strong>Genres:</strong>
+                        <span class="genre" *ngFor="let genre of artist.genres">
+                            <i>{{ genre }}</i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
